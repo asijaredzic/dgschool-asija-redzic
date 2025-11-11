@@ -1,10 +1,10 @@
 import React from 'react'
 import { View, Text, Stylesheet, Button } from "react-native";
 
-const About = ({ navigation }) => {
+const Profile = ({ navigation }) => {
     return(
         <View style={Stylesheet.container}>
-            <Text> Welcome to About Screen </Text>
+            <Text> Welcome to Profile Screen </Text>
              <Button
             title="Go to Home screen"
             onPress={() => navigation.goBack()}
@@ -22,4 +22,4 @@ const styles = Stylesheet.create({
     },
 });
 
-export default About;
+export default Profile;

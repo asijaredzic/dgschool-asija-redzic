@@ -1,12 +1,12 @@
 import React from 'react'
 import { View, Text, Stylesheet, Button } from "react-native";
 
-const About = ({ navigation }) => {
+const Settings = ({ navigation }) => {
     return(
         <View style={Stylesheet.container}>
-            <Text> Welcome to About Screen </Text>
+            <Text> Welcome to Settings Screen </Text>
              <Button
-            title="Go to Home screen"
+            title="Go to Home Screen"
             onPress={() => navigation.goBack()}
             />        
         </View>
@@ -22,4 +22,4 @@ const styles = Stylesheet.create({
     },
 });
 
-export default About;
+export default Settings;

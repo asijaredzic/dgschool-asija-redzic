@@ -6,7 +6,7 @@ const Home = ({ navigation }) => {
         <View style={Stylesheet.container}>
             <Text> Welcome to Home Screen </Text>
             <Button 
-            title="Go to about screen"
+            title="Go to About screen"
             onPress={() => navigation.navigate()}
             />
         </View>
