@@ -17,9 +17,18 @@ const MainStackNavigator = ({navigation}) => {
     return(
         <Stack.Navigator screenOptions={screenOptionStyle}>
             <Stack.Screen name="Home" component={Home} />
+        </Stack.Navigator>
+    );
+};
+
+const AboutStackNavigator = ({navigation}) => {
+    return(
+        <Stack.Navigator screenOptions={screenOptionStyle}>
             <Stack.Screen name="About" component={About} />
         </Stack.Navigator>
     );
 };
 
-export default MainStackNavigator;
+export { MainStackNavigator, AboutStackNavigator };
+// kada ima vise exporta onda se ne pise default i samo se pise lista
+// { apple, cinammon, bananas };
