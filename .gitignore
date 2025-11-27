@@ -39,3 +39,23 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# build
+dist/
+build/
+android/
+ios/
+
+# misc
+.expo/
+.vscode/
+.env
+.DS_Store
+
+
