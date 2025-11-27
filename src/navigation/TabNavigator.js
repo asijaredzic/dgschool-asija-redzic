@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons, Ionicons, FontAwesome5 } from "@expo/vector-icons";
-// import ekrana
+
 import Home from "../screens/Home";
 import About from "../screens/About";
 import Profile from "../screens/Profile";
@@ -19,7 +19,7 @@ const BottomTabNavigator = () => {
                 tabBarActiveTintColor: "white",
                 tabBarInactiveTintColor: "lightgrey",
                 tabBarStyle: {
-                    backgroundColor: "#FF6347",
+                    backgroundColor: "#384053",
                 },
                 tabBarLabelStyle: {
                     fontSize: 12,
@@ -30,9 +30,9 @@ const BottomTabNavigator = () => {
             <Tab.Screen 
                 name="Home"
                 component={Home}
-                options={{ // opcije za odvojene tabove
+                options={{
                     tabBarLabel: "Home",
-                    tabBarIcon: ({color}) => ( // ikonica
+                    tabBarIcon: ({color}) => (
                         <MaterialCommunityIcons name="home" size={26} color={color} />
                     ),
                 }}
@@ -44,7 +44,7 @@ const BottomTabNavigator = () => {
                 options={{
                     tabBarLabel: "About",
                     tabBarIcon: ({color}) => (
-                        <MaterialCommunityIcons name="information-circle" size={26} color={color} />
+                        <MaterialCommunityIcons name="information" size={26} color={color} />
                     ),
                 }}
             />
@@ -55,7 +55,7 @@ const BottomTabNavigator = () => {
                 options={{
                     tabBarLabel: "Profile",
                     tabBarIcon: ({color}) => (
-                        <MaterialCommunityIcons name="account-circle" size={26} color={color} />
+                        <MaterialCommunityIcons name="account" size={26} color={color} />
                     ),
                 }}
             />
@@ -82,7 +82,7 @@ const BottomTabNavigator = () => {
                 options={{
                     tabBarLabel: "Contact",
                     tabBarIcon: ({color}) => (
-                        <FontAwesome5 name="contact-book" size={22} color={color} />
+                        <FontAwesome5 name="address-book" size={22} color={color} />
                     ),
                 }}
             />
