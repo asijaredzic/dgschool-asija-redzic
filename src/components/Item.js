@@ -10,6 +10,7 @@ const Item = ({ item }) => (
             <Text style={styles.category}>{item.category}</Text>
             <Text style={styles.desc}>{item.description}</Text>
             <Text style={styles.price}>${item.price}</Text>
+            <Text style={styles.rating}>Rating: </Text>
         </View>
     </View>
 );
@@ -49,6 +50,11 @@ const styles = StyleSheet.create({
     desc: {
         fontStyle: 'italic',
         marginTop: 4,
+    },
+
+    rating: {
+        fontWeight: 'bold',
+        fontSize: 16,
     },
 
     price: {

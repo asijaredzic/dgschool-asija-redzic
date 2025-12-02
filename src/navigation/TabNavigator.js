@@ -7,6 +7,7 @@ import About from "../screens/About";
 import Profile from "../screens/Profile";
 import Settings from "../screens/Settings";
 import Contact from "../screens/Contact";
+import Ios from "../screens/Ios";
 
 const Tab = createBottomTabNavigator();
 

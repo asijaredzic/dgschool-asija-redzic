@@ -18,25 +18,25 @@ class Ios extends Component {
     });
   }
 
-
   render() {
     return (
         <ScrollView>
             <View style={styles.container}>
                 <Text style={styles.desc}>Ios Products</Text>
-                    <FlatList
+
+                <FlatList
                     data={this.state.products}
                     renderItem={({ item }) => (
                         <View>
-                        <Item item={item} />
+                            <Item item={item} />
                         </View>
                     )}
                     keyExtractor={(item) => item.id.toString()}
-                    />
+                />
 
-                    <TouchableOpacity style={styles.btn}>
+                <TouchableOpacity style={styles.btn}>
                     <Text style={styles.btnText}>View More</Text>
-                    </TouchableOpacity>
+                </TouchableOpacity>
             </View>
         </ScrollView>
     );
@@ -51,7 +51,20 @@ const styles = StyleSheet.create({
     },
     desc: {
         marginBottom: 20,
+        fontSize: 20,
+        fontWeight: "bold",
     },
+    btn: {
+        backgroundColor: "#384053",
+        padding: 10,
+        borderRadius: 8,
+        marginTop: 20,
+    },
+    btnText: {
+        color: "white",
+        textAlign: "center",
+        fontSize: 16,
+    }
 })
 
 export default Ios;
