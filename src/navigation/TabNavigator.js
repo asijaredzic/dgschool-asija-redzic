@@ -86,6 +86,19 @@ const BottomTabNavigator = () => {
                     ),
                 }}
             />
+
+            <Tab.Screen 
+                name="Ios"
+                component={IosStackNavigator}
+                options={{
+                    tabBarLabel: "Ios",
+                    tabBarIcon: ({color}) => (
+                        <Ionicons name="apple" size={26} color={color} />
+                    ),
+                    tabBarBadge: badgeCount > 0 ? badgeCount : undefined,
+                    tabBarBadgeStyle: { backgroundColor: "white", color: "#FF6347" },
+                }}
+            />
         </Tab.Navigator>
     )
 }

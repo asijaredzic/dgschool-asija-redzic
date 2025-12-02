@@ -23,71 +23,83 @@ class Home extends React.Component {
 
   componentDidMount() {
     this.setState({
-      products: data,
+      products: data.popularproducts,
     });
   }
+
+  sortAsc = () => {
+    const sorted = [...this.state.products].sort((a, b) => a.price - b.price);
+    this.setState({ products: sorted });
+  };
+
+  sortDesc = () => {
+    const sorted = [...this.state.products].sort((a, b) => b.price - a.price);
+    this.setState({ products: sorted });
+  };
 
   render() {
     return (
       <ScrollView>
         <View style={styles.container}>
           <View style={styles.sliderContainer}>
-            <Swiper
-              autoplay={true}
-              activeDotColor="rgba(34, 212, 255, 1)"
-              autoplayTimeout={5}
-            >
+            <Swiper autoplay={true} activeDotColor="rgba(34, 212, 255, 1)" autoplayTimeout={5}>
               <View style={styles.item}>
-                <Image
-                  style={styles.imgItem}
-                  source={require("../../assets/banner_1.jpg")}
-                  resizeMode="cover"
-                />
+                <Image style={styles.imgItem} source={require("../../assets/banner_1.jpg")} />
               </View>
+
               <View style={styles.item}>
-                <Image
-                  style={styles.imgItem}
-                  source={require("../../assets/banner_2.png")}
-                  resizeMode="cover"
-                />
+                <Image style={styles.imgItem} source={require("../../assets/banner_2.png")} />
               </View>
+
               <View style={styles.item}>
-                <Image
-                  style={styles.imgItem}
-                  source={require("../../assets/banner_3.jpeg")}
-                  resizeMode="cover"
-                />
+                <Image style={styles.imgItem} source={require("../../assets/banner_3.jpeg")} />
               </View>
+
               <View style={styles.item}>
-                <Image
-                  style={styles.imgItem}
-                  source={require("../../assets/banner_5.jpg")}
-                  resizeMode="cover"
-                />
+                <Image style={styles.imgItem} source={require("../../assets/banner_5.jpg")} />
               </View>
             </Swiper>
           </View>
+
           <View style={styles.iconsContainer}>
-            <Icon name="cellphone" iconText="Iphone"></Icon>
-            <Icon name="android" iconText="Samsung"></Icon>
-            <Icon name="laptop" iconText="Laptop"></Icon>
+            <TouchableOpacity 
+              onPress={() => this.props.navigation.navigate("Ios")}
+            />
+            
+            <Icon name="cellphone" iconText="Iphone" />
+            <Icon name="android" iconText="Samsung" />
+            <Icon name="laptop" iconText="Laptop" />
           </View>
+
           <View style={styles.iconsContainer}>
-            <Icon name="tablet" iconText="Tablet"></Icon>
-            <Icon name="mouse" iconText="Mouse"></Icon>
-            <Icon name="keyboard-outline" iconText="Keyboard"></Icon>
+            <Icon name="tablet" iconText="Tablet" />
+            <Icon name="mouse" iconText="Mouse" />
+            <Icon name="keyboard-outline" iconText="Keyboard" />
           </View>
 
           <View style={styles.productsContainer}>
             <Text style={styles.title}>Most Popular Products</Text>
+
+            <View style={{ flexDirection: "row", marginBottom: 10, gap: 10 }}>
+              <TouchableOpacity onPress={this.sortAsc} style={styles.sortBtn}>
+                <Text style={styles.sortText}>Price ↑</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity onPress={this.sortDesc} style={styles.sortBtn}>
+                <Text style={styles.sortText}>Price ↓</Text>
+              </TouchableOpacity>
+            </View>
+
             <FlatList
-              data={this.state.products.popularproducts}
+              data={this.state.products}
               renderItem={({ item }) => (
                 <View>
                   <Item item={item} />
                 </View>
               )}
+              keyExtractor={(item) => item.id.toString()}
             />
+
             <TouchableOpacity style={styles.btn}>
               <Text style={styles.btnText}>View More</Text>
             </TouchableOpacity>
@@ -143,6 +155,18 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
 
+  sortBtn: {
+    backgroundColor: "#384053",
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    borderRadius: 8,
+  },
+
+  sortText: {
+    color: "white",
+    fontWeight: "bold",
+  },
+
   btn: {
     backgroundColor: "#22D4FF",
     height: 50,
@@ -158,4 +182,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home; 
+export default Home;
