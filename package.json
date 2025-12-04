@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
     "@react-native-community/masked-view": "^0.1.11",
@@ -12,4 +13,22 @@
     "react-native-screens": "^4.18.0",
     "react-native-swiper": "^1.6.0"
   }
+=======
+  "name": "dgschool-asija-redzic",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "expo": "~54.0.22",
+    "expo-status-bar": "~3.0.8",
+    "react": "19.1.0",
+    "react-native": "0.81.5"
+  },
+  "private": true
+>>>>>>> b2022441324d3af12a2b4d4ff6b3cc756f9ce717
 }
