@@ -5,7 +5,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import Item from '../components/Item';
 import { FavoritesContext } from '../../context/FavoritesContext';
 
-class Ios extends Component {
+class Android extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,7 +15,7 @@ class Ios extends Component {
 
   componentDidMount() {
     this.setState({
-        products: data.ios,
+        products: data.android,
     });
   }
 
@@ -23,7 +23,7 @@ class Ios extends Component {
     return (
         <ScrollView>
             <View style={styles.container}>
-                <Text style={styles.desc}>Ios Products</Text>
+                <Text style={styles.desc}>Android Products</Text>
 
                 <FlatList
                     data={this.state.products}
@@ -68,4 +68,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Ios;
+export default Android;

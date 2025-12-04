@@ -100,6 +100,19 @@ const BottomTabNavigator = () => {
                     tabBarBadgeStyle: { backgroundColor: "white", color: "#FF6347" },
                 }}
             />
+
+            <Tab.Screen 
+                name="Android"
+                component={AndroidStackNavigator}
+                options={{
+                    tabBarLabel: "Android",
+                    tabBarIcon: ({color}) => (
+                        <Ionicons name="android" size={26} color={color} />
+                    ),
+                    tabBarBadge: badgeCount > 0 ? badgeCount : undefined,
+                    tabBarBadgeStyle: { backgroundColor: "white", color: "#FF6347" },
+                }}
+            />
         </Tab.Navigator>
     )
 }
