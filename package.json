@@ -1,4 +1,19 @@
 {
+<<<<<<< HEAD
+  "dependencies": {
+    "@expo/vector-icons": "^15.0.3",
+    "@react-native-community/masked-view": "^0.1.11",
+    "@react-navigation/bottom-tabs": "^7.8.4",
+    "@react-navigation/drawer": "^7.7.2",
+    "@react-navigation/native": "^7.1.19",
+    "@react-navigation/stack": "^7.6.2",
+    "react-native-gesture-handler": "^2.29.1",
+    "react-native-reanimated": "^4.1.3",
+    "react-native-safe-area-context": "^5.6.2",
+    "react-native-screens": "^4.18.0",
+    "react-native-swiper": "^1.6.0"
+  }
+=======
   "name": "dgschool-asija-redzic",
   "version": "1.0.0",
   "main": "index.js",
@@ -15,4 +30,5 @@
     "react-native": "0.81.5"
   },
   "private": true
+>>>>>>> b2022441324d3af12a2b4d4ff6b3cc756f9ce717
 }
