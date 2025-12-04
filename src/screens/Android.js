@@ -23,7 +23,7 @@ class Android extends Component {
 
     if (this.state.showInStockOnly) {
         filteredProducts = filteredProducts.filter(
-            (product) => product.stock === true
+            (product) => product.stock
         );
     }
 
