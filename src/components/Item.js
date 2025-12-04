@@ -8,9 +8,14 @@ const Item = ({ item }) => (
         <View style={styles.textContainer}>
             <Text style={styles.name}>{item.name}</Text>
             <Text style={styles.category}>{item.category}</Text>
-            <Text style={styles.desc}>{item.description}</Text>
+
+            <Text style={styles.desc} numberOfLines={2}>
+                {item.description}
+            </Text>
+
+            <Text style={styles.rating}>Rating: {item.rating}</Text>
+
             <Text style={styles.price}>${item.price}</Text>
-            <Text style={styles.rating}>Rating: </Text>
         </View>
     </View>
 );
@@ -24,6 +29,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         marginBottom: 16,
         padding: 8,
+        elevation: 3,
     },
 
     img: {
@@ -35,6 +41,7 @@ const styles = StyleSheet.create({
     textContainer: {
         paddingHorizontal: 10,
         width: "70%",
+        justifyContent: "space-between"
     },
 
     name: {
@@ -44,17 +51,19 @@ const styles = StyleSheet.create({
 
     category: {
         fontSize: 12,
-        color: "#22D4FF"
+        color: "#22D4FF",
+        marginBottom: 2
     },
 
     desc: {
         fontStyle: 'italic',
-        marginTop: 4,
+        marginTop: 2,
+        marginBottom: 4
     },
 
     rating: {
         fontWeight: 'bold',
-        fontSize: 16,
+        fontSize: 14,
     },
 
     price: {
