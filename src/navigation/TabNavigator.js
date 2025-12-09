@@ -7,6 +7,7 @@ import About from "../screens/About";
 import Profile from "../screens/Profile";
 import Settings from "../screens/Settings";
 import Contact from "../screens/Contact";
+import Android from "../screens/Android";
 import Ios from "../screens/Ios";
 
 const Tab = createBottomTabNavigator();
@@ -41,7 +42,7 @@ const BottomTabNavigator = () => {
 
             <Tab.Screen 
                 name="About"
-                component={About}
+                component={Ios}
                 options={{
                     tabBarLabel: "About",
                     tabBarIcon: ({color}) => (
@@ -103,7 +104,7 @@ const BottomTabNavigator = () => {
 
             <Tab.Screen 
                 name="Android"
-                component={AndroidStackNavigator}
+                component={Android}
                 options={{
                     tabBarLabel: "Android",
                     tabBarIcon: ({color}) => (

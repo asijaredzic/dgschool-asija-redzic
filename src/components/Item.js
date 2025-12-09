@@ -21,6 +21,8 @@ const Item = ({ item }) => {
 
                 <Text style={styles.price}>${item.price}</Text>
 
+                <Text style={styles.price}>Stock: {item.stock}</Text>
+
                 <Button
                     title="Add to Cart"
                     onPress={() => addToCart(item)}

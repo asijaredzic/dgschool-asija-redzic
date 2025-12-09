@@ -5,6 +5,7 @@ import About from '../screens/About'
 import { Background } from '@react-navigation/elements';
 import Ios from '../screens/Ios';
 import Android from '../screens/Android';
+import Single from '../screens/Single';
 
 const Stack = createStackNavigator();
 
@@ -19,6 +20,9 @@ const MainStackNavigator = ({navigation}) => {
     return(
         <Stack.Navigator screenOptions={screenOptionStyle}>
             <Stack.Screen name="Home" component={Home} />
+             <Stack.Screen name="Ios" component={Ios} />
+              <Stack.Screen name="Android" component={Android} />
+               <Stack.Screen name="Single" component={Single} />
         </Stack.Navigator>
     );
 };
@@ -27,22 +31,6 @@ const AboutStackNavigator = ({navigation}) => {
     return(
         <Stack.Navigator screenOptions={screenOptionStyle}>
             <Stack.Screen name="About" component={About} />
-        </Stack.Navigator>
-    );
-};
-
-const IosStackNavigator = () => {
-    return(
-        <Stack.Navigator screenOptions={screenOptionStyle}>
-            <Stack.Screen name="iOS" component={Ios} />
-        </Stack.Navigator>
-    );
-};
-
-const AndroidStackNavigator = () => {
-    return(
-        <Stack.Navigator screenOptions={screenOptionStyle}>
-            <Stack.Screen name="Android" component={Android} />
         </Stack.Navigator>
     );
 };
